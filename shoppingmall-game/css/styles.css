@@ -1,0 +1,98 @@
+:root {
+  /* color */
+  --color-bgPink: rgb(243, 205, 218);
+  --color-pink: rgba(255, 182, 193, 0.925);
+  --color-blue: rgba(135, 206, 250, 0.952);
+  --color-yellow: rgb(255, 255, 0);
+  --color-white: rgba(245, 245, 245, 0.932);
+  /* button */
+  --btn-transparent: transparent;
+  --btn-none: none;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: var(--color-bgPink);
+}
+
+.categories {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.categories :first-child {
+  background: var(--btn-transparent);
+  border: var(--btn-none);
+}
+
+.categories :nth-child(2) {
+  background: var(--btn-transparent);
+  border: var(--btn-none);
+}
+
+.categories :nth-child(3) {
+  background: var(--btn-transparent);
+  border: var(--btn-none);
+}
+
+.categories img {
+  width: 40px;
+  height: 40px;
+}
+
+.categories button {
+  font-size: 15px;
+  border: 4px;
+  padding: 8px;
+  margin-left: 3px;
+  margin-right: 3px;
+}
+
+.blueBtn {
+  background-color: var(--color-blue);
+  border-color: var(--color-blue);
+}
+
+.yellowBtn {
+  background-color: var(--color-yellow);
+  border-color: var(--color-yellow);
+}
+
+.pinkBtn {
+  background-color: var(--color-pink);
+  border-color: var(--color-pink);
+}
+
+.items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  list-style: none;
+  padding-left: 0;
+}
+
+.item {
+  background-color: var(--color-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 150%;
+  margin-bottom: 7px;
+}
+
+.item img {
+  width: 40px;
+  height: 40px;
+}
+
+.item span {
+  /* width: 50px;
+  height: 50px; */
+}
