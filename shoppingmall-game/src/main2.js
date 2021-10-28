@@ -123,6 +123,7 @@ function filterColor(color) {
       let data = shoppingList.filter(
         (item) => item.color == color && item.type == selectedType
       );
+      33;
       renderItems(data);
     } else {
       let data = shoppingList.filter((item) => item.color == color);

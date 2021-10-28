@@ -102,5 +102,3 @@ function renderItems(data) {
 }
 
 renderItems(shoppingList);
-
-// blueT.addEventListener("click", filterT);
