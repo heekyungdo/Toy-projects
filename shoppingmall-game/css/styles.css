@@ -1,11 +1,11 @@
 :root {
-  /* color */
+  /* 컬러 */
   --color-bgPink: rgb(243, 205, 218);
   --color-pink: rgba(255, 182, 193, 0.925);
   --color-blue: rgba(135, 206, 250, 0.952);
   --color-yellow: rgb(255, 255, 0);
   --color-white: rgba(245, 245, 245, 0.932);
-  /* button */
+  /* 버튼 */
   --btn-transparent: transparent;
   --btn-none: none;
 }
@@ -19,38 +19,36 @@ body {
   background: var(--color-bgPink);
 }
 
+/* 카테고리 버튼 */
 .categories {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.categories :first-child {
+.categories button {
+  cursor: pointer;
+}
+
+.imgButton {
   background: var(--btn-transparent);
   border: var(--btn-none);
 }
 
-.categories :nth-child(2) {
-  background: var(--btn-transparent);
-  border: var(--btn-none);
-}
-
-.categories :nth-child(3) {
-  background: var(--btn-transparent);
-  border: var(--btn-none);
-}
-
+/* 카테고리 버튼 이미지 */
 .categories img {
   width: 40px;
   height: 40px;
 }
 
+/* 카테고리 버튼 */
 .categories button {
   font-size: 15px;
   border: 4px;
   padding: 8px;
   margin-left: 3px;
   margin-right: 3px;
+  cursor: pointer;
 }
 
 .blueBtn {
@@ -68,6 +66,7 @@ body {
   border-color: var(--color-pink);
 }
 
+/* 의류 리스트 */
 .items {
   display: flex;
   flex-direction: column;
@@ -78,6 +77,7 @@ body {
   padding-left: 0;
 }
 
+/* 각각의 의류 리스트 */
 .item {
   background-color: var(--color-white);
   display: flex;
@@ -87,12 +87,8 @@ body {
   margin-bottom: 7px;
 }
 
+/* 의류 리스트 이미지 */
 .item img {
   width: 40px;
   height: 40px;
-}
-
-.item span {
-  /* width: 50px;
-  height: 50px; */
 }

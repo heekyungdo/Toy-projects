@@ -80,14 +80,57 @@ let shoppingList = [
   },
 ];
 
-function filterType(type) {
-  let data = shoppingList.filter((item) => item.type == type);
-  renderItems(data);
+let selectedType = "";
+let selectedColor = "";
+
+function filterType(type, e) {
+  if (selectedType === type) {
+    e.target.style.border = "none";
+    if (selectedColor !== "") {
+      let data = shoppingList.filter((item) => item.color == selectedColor);
+      renderItems(data);
+    } else {
+      renderItems(shoppingList);
+    }
+    selectedType = "";
+  } else {
+    e.target.style.border = "1px solid red";
+    if (selectedColor !== "") {
+      let data = shoppingList.filter(
+        (item) => item.type == type && item.color == selectedColor
+      );
+      renderItems(data);
+    } else {
+      let data = shoppingList.filter((item) => item.type == type);
+      renderItems(data);
+    }
+
+    selectedType = type;
+  }
 }
 
 function filterColor(color) {
-  let data = shoppingList.filter((item) => item.color == color);
-  renderItems(data);
+  if (selectedColor === color) {
+    if (selectedType !== "") {
+      let data = shoppingList.filter((item) => item.type == selectedType);
+      renderItems(data);
+    } else {
+      renderItems(shoppingList);
+    }
+    selectedColor = "";
+  } else {
+    if (selectedType !== "") {
+      let data = shoppingList.filter(
+        (item) => item.color == color && item.type == selectedType
+      );
+      renderItems(data);
+    } else {
+      let data = shoppingList.filter((item) => item.color == color);
+      renderItems(data);
+    }
+
+    selectedColor = color;
+  }
 }
 
 function renderItems(data) {
